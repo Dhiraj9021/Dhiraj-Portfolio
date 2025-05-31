@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <title>Dhiraj Patil</title>
+</head>
+
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Dhiraj Patil</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+        
+            <a href="#portfolio">Projects</a>
+            <a href="#Qaulification">Qualification</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+     
+     <div class="home-content">
+            <h2>Hello I'm</h2>
+            <h1 id="dynamic-title">Dhiraj Patil</h1>
+          
+        
+       
+        
+        <p> "Innovative. Scalable. Impactful. My portfolio showcases solutions that merge technology with creativity, driving efficiency and solving real-world challenges."</p>
+          
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/dhirajpatil2005/"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://github.com/Dhiraj9021"><i class='bx bxl-github' ></i></a>
+            <a href=""><i class='bx bxl-instagram' ></i></a>
+            <a href="#contact"><i class='bx bxl-whatsapp' ></i></a>
+          
+
+        </div>
+        <a href="https://www.linkedin.com/in/dhirajpatil2005/" class="btn" target="_blank">View linkedin</a>
+      </div>
+
+     
+      <div class="profession-container">
+        <div class="profession-box">
+           <div class="profession" style="--i:0;" >    
+               <i class='bx bx-code-alt'></i>
+               <h3>Developer</h3>
+           </div>
+
+           <div class="profession" style="--i:1;" >    
+               <i class='bx bx-camera'></i>
+               <h3>Artist</h3>
+           </div>
+
+           <div class="profession" style="--i:2;" >    
+               <i class='bx bx-code'></i>
+               <h3>Coder</h3>
+           </div>
+
+           <div class="profession" style="--i:3;" >    
+               <i class='bx bx-game'></i>
+               <h3>Gamer</h3>
+           </div>
+
+           <div class="circle"></div>
+        </div>
+           <div class="overlay"></div>
+        </div>
+          <div class="home-img">
+            <div class="rotating-border">
+              <div class="border-ring"></div>
+                <img src="img1.jpg" alt="image not found">
+            </div>
+         </div>
+
+      
+
+
+    </section>
+
+
+    <!--Add the CSS for the dynamic title-->
+
+    <style>
+        #dynamic-title {
+            font-size: 4.6rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            white-space: nowrap;
+            overflow: hidden;
+          
+           
+        }
+    
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+    
+    <script>
+        const titles = ["Dhiraj Patil","Web Developer", "Problem Solver","Creative Thinker"];
+        let index = 0;
+        let charIndex = 0;
+        let currentTitle = "";
+        let isDeleting = false;
+    
+        function typeEffect() {
+            const titleElement = document.getElementById("dynamic-title");
+            const fullTitle = ` ${titles[index]}`;
+    
+            if (isDeleting) {
+                titleElement.innerText = fullTitle.substring(0, charIndex--);
+            } else {
+                titleElement.innerText = fullTitle.substring(0, charIndex++);
+            }
+    
+            if (!isDeleting && charIndex === fullTitle.length) {
+                setTimeout(() => {
+                    isDeleting = true;
+                }, 2000);
+            }
+    
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % titles.length;
+            }
+    
+            setTimeout(typeEffect, isDeleting ? 100 : 200);
+        }
+    
+        typeEffect();
+    </script>
+
+<!--about sectione-->
+    <section class="about" id="about">
+   
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>
+                Hi there, welcome to my website! I'm Dhiraj,
+                a passionate web developer who enjoys learning new technologies
+                and solving problems with code!
+            </h3>
+
+            <p>
+                This website is my personal blog where I write about web development
+                topics that interest me and inspire me.
+            </p>
+            <p>A dedicated and passionate Data Science undergraduate
+                focused on mastering Python programming and continuously
+                enhancing technical skills. Committed to applying data science
+                methodologies to develop innovative and impactful solutions for
+                real-world challenges. Enthusiastic about learning, adapting, and
+                growing in the dynamic field of data science.</p>
+          
+            <p>
+                Thank you for visiting my website and getting to know me better.
+            
+            </p>
+            <a href="#" class="btn">Read More</a>
+            
+            
+         <h3 class="heading"><br>Competitive <span>Programming</span></h3>
+        <div class="profiles-container">
+            <a href="https://www.codechef.com/users/dhiraj_patil27" class="profile-card">
+                <img src="codiing img\Codechef.jpeg" alt="CodeChef">
+                <span>CodeChef</span>
+            </a>
+            <a href="https://leetcode.com/u/OIUWMXpKC4/" class="profile-card">
+                <img src="codiing img\Leetcode.jpeg" alt="LeetCode">
+                <span>LeetCode</span>
+            </a>
+            <a href="https://www.hackerrank.com/profile/dhirajpatil11121" class="profile-card">
+                <img src="codiing img\HackerRank.png" alt="HackerRank">
+                <span>HackerRank</span>
+            </a>
+            <a href="https://www.geeksforgeeks.org/user/dhirajpat3sw0/" class="profile-card">
+                <img src="codiing img\GFG.jpeg" alt="GeeksforGeeks">
+                <span>GeeksforGeeks</span>
+            </a>
+        </div>
+        </div>
+    </section>
+    <br><br><br>
+   
+
+<!------------------------------------------------------skill sectione------------------------------------------------------>
+    <section class="skills" id="skills">
+    <h2 class="heading"><br>My <span>Skills</span></h2>
+    <p class="sub-heading">A categorized view of my <strong>technical expertise</strong>.</p>
+
+    <!-- Tabs -->
+    <div class="skills-tabs">
+        <button class="tab-button active" onclick="showTab(event, 'core')">Core</button>
+        <button class="tab-button" onclick="showTab(event, 'programming')">Programming</button>
+        <button class="tab-button" onclick="showTab(event, 'tools')">Tools</button>
+        <button class="tab-button" onclick="showTab(event, 'ai')">AI/ML</button>
+       
+    </div>
+
+    <!-- Tab Content -->
+    <div class="skills-content">
+
+        <!-- Core Skills -->
+        <div class="tab-content active" id="core">
+            <h3>Core Skills</h3>
+            <ul>
+                <li><i class='bx bx-code-curly' ></i>  Data Structures & Algorithms</li>
+                <li><i class='bx bx-code-block' ></i>  web Development</li>
+                <li><i class='bx bx-laptop' ></i>  Operating System</li>
+                <li><i class='bx bx-data' ></i>  Database Management System</li>
+            
+            </ul>
+        </div>
+
+        <!-- Programming -->
+     <div class="tab-content" id="programming">
+    <h3>Programming Languages</h3>
+    <ul>
+        <li><i class='bx bxl-python'></i>  Python</li>
+        <li><i class='bx bxl-java'></i>  Java</li>
+        <li><i class='bx bx-code-curly'></i>  C</li>
+        <li><i class='bx bxs-data'></i>  SQL</li>
+        <li><i class='bx bxl-html5'></i>  HTML</li>
+        <li><i class='bx bxl-css3'></i>  CSS</li>
+        <li><i class='bx bxl-javascript'></i>  JavaScript</li>
+    </ul>
+</div>
+
+        <!-- Tools -->
+        <div class="tab-content" id="tools">
+            <h3>Tools</h3>
+            <ul>
+                <li><i class='bx bxl-github' ></i>  Git & GitHub</li>
+                <li><i class='bx bx-code-alt'></i>  VS Code</li>
+               
+            </ul>
+        </div>
+
+        <!-- AI/ML -->
+        <div class="tab-content" id="ai">
+            <h3>AI/ML</h3>
+            <ul>
+                <li><i class='bx bx-laptop' ></i>  Machine Learning</li>
+             
+            </ul>
+        </div>
+
+    
+    
+
+    </div>
+</section>
+
+<script>
+    function showTab(event, tabId) {
+    // Remove active from buttons & contents
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+    // Activate clicked
+    event.currentTarget.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+
+</script>
+
+
+<!------------------------------------------------------project sectione------------------------------------------------------>
+     
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading"><br>My <span>Projects</span></h2>
+    
+        <div class="portfolio-container">
+            
+            <!-- Web Development Projects -->
+            <div class="portfolio-category">
+                <h3 class="category-title">🌐 Web Development Projects</h3>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="translator.jpeg" alt="Web Project">
+                        <div class="card-content">
+                            <h4>Language Translator</h4>
+                            <p>Responsive language translator that enables real-time multilingual communication.</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="portfolio.png" alt="Web Project">
+                        <div class="card-content">
+                            <h4>Portfolio website</h4>
+                            <p>A personal portfolio website highlighting my skills and projects in web development.</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Machine Learning Projects -->
+            <div class="portfolio-category">
+                <h3 class="category-title">🤖 Machine Learning Projects</h3>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="weather.jpg" alt="ML Project">
+                        <div class="card-content">
+                            <h4>Weather prediction Website</h4>
+                            <p>A machine learning-based Naive bayes classifer weather prediction web app from previous Data</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="GPS.jpg" alt="Predictive Model">
+                        <div class="card-content">
+                            <h4>Garbage Vehicle Tracker</h4>
+                            <p>Smart GPS tracking system for garbage collection vehicles, ensuring optimized routes and efficiency.</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+          
+    
+        </div>
+    </section>
+
+
+    
+<!------------------------------------------------------Achivement sectione------------------------------------------------------>
+<section class="testimonial-container">
+  <h2 class="heading">Valuable <span>Achievements</span></h2>
+  <div class="testimonial-wrapper">
+    <div class="testimonial-box">
+
+      <!-- Slides -->
+      <div class="testimonial-slide active">
+        <img src="Coverges.jpg" alt="Coverges 2025">
+        <h3>1st Place at RCPIT Coverges'25</h3>
+        <p>Winning 1st place at Coverges'25 in Airo gliding was unforgettable! Our team mastered challenges and pushed boundaries in aerodynamic design.</p>
+      </div>
+
+      <div class="testimonial-slide">
+        <img src="SIH.jpg" alt="SIH 2024">
+        <h3>SIH 2024</h3>
+        <p>We successfully qualified for the Institutional Round of Smart India Hackathon (SIH), showcasing innovation and real-world problem solving.</p>
+      </div>
+
+      <!-- Navigation -->
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+      <!-- Dots -->
+      <div class="dots-container">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let slideIndex = 0;
+const slides = document.getElementsByClassName("testimonial-slide");
+const dots = document.getElementsByClassName("dot");
+let autoSlide;
+
+function showSlide(index) {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+    dots[i]?.classList.remove("active");
+  }
+  slides[index].classList.add("active");
+  dots[index]?.classList.add("active");
+}
+
+function nextSlide() {
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
+}
+
+function changeSlide(n) {
+  clearInterval(autoSlide);
+  slideIndex = (slideIndex + n + slides.length) % slides.length;
+  showSlide(slideIndex);
+  autoSlide = setInterval(nextSlide, 4000);
+}
+
+function currentSlide(n) {
+  clearInterval(autoSlide);
+  slideIndex = n;
+  showSlide(slideIndex);
+  autoSlide = setInterval(nextSlide, 4000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  showSlide(slideIndex);
+  autoSlide = setInterval(nextSlide, 4000);
+});
+
+</script>
+ 
+<!------------------------------------------------------- Qaulification sectione------------------------------------------------------->
+   <section class="Qaulification" id="Qaulification">
+ 
+    
+        <h2 class="heading">My <span>Qualifications <br><br></span></h2>
+        <div class="qualifications-container">
+            <div class="qualification-card">
+                <div class="card-front">
+                    <img src="RC.jpeg" alt="B.Tech">
+                    <h3>B.Tech</h3>
+                    <p>R. C. Patel Institute of Technology, Shirpur<br>2023 - Present</p>
+                </div>
+                <div class="card-back">
+                    <h3>Specialization</h3>
+                    <p>Computer Science & Engineering (Data Science)</p>
+                </div>
+            </div>
+    
+            <div class="qualification-card">
+                <div class="card-front">
+                    <img src="college.png" alt="Class XII">
+                    <h3>Class XII</h3>
+                    <p>Late. G.D Mali Jr. College, Dhule<br>2021 - 2022</p>
+                </div>
+                <div class="card-back">
+                    <h3>Details</h3>
+                    <p>Major PCMB : Science & Mathematics</p>
+                </div>
+            </div>
+    
+            <div class="qualification-card">
+                <div class="card-front">
+                    <img src="school.png" alt="Class X">
+                    <h3>Class X</h3>
+                    <p>S. S. C English Medium School, Nardana<br>2021</p>
+                </div>
+                <div class="card-back">
+                    <h3>Achievements</h3>
+                    <p>Top Performer in Mathematics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!----------------------------------------------------------------------contact sectione---------------------------------------------------------------------------->
+   
+<!-- Boxicons CDN -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me!</span></h2>
+
+  <div class="contact-grid">
+    <!-- Phone Contact -->
+    <div class="contact-box">
+      <i class='bx bx-phone'></i>
+      <h3><a href="tel:+919021909420">+91 9021909420</a></h3>
+    </div>
+
+    <!-- Email Contact -->
+    <div class="contact-box">
+      <i class='bx bx-envelope'></i>
+      <h3><a href="mailto:dhirajpatil09021@gmail.com">dhirajpatil09021@gmail.com</a></h3>
+    </div>
+  </div>
+
+  <!-- Social Media & LinkedIn Button -->
+  <div class="home-content">
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/dhirajpatil2005/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+      <a href="https://github.com/Dhiraj9021" target="_blank"><i class='bx bxl-github'></i></a>
+      <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+      <a href="https://wa.me/919021909420" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+    </div>
+
+    <a href="https://www.linkedin.com/in/dhirajpatil2005/" class="btn" target="_blank">View LinkedIn</a>
+  </div>
+</section>
+
+
+
+    
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Designed & Built by Dhiraj Patil <br>Copyright &copy; 2025 Dhiraj | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+</body>
+</html>
+!
